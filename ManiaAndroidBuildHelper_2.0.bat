@@ -1,11 +1,11 @@
 @echo off
 echo -------------------------------------------------------
-echo  MisterSheeple's Sonic Mania Android Build Helper v2.0
+echo    KiaraGale's Sonic Mania Android Build Helper v2.0
 echo -------------------------------------------------------
 echo.
 echo                                                  WARNING:
 echo.
-echo Before continuing, please consult the guide at https://github.com/MisterSheeple/Sonic-Mania-Android-Build-Guide/
+echo Before continuing, please consult the guide at https://github.com/KiaraGale/Sonic-Mania-Android-Build-Guide/
 echo.
 pause
 echo.
@@ -15,9 +15,9 @@ goto isitstillthere
 echo Checking for existing folder... 
 echo.
 if exist "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\ (
-  echo Existing Folder being deleted, this should take about 15 seconds...
+  echo Existing Folder being deleted, this should take about 10 seconds...
   rmdir /s /q "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\
-  c:\WINDOWS\System32\timeout.exe /t 15 /nobreak > NUL
+  c:\WINDOWS\System32\timeout.exe /t 10 /nobreak > NUL
   echo.
   echo Folder should be deleted, continuing...
 ) else (
@@ -35,10 +35,10 @@ cls
 goto clone
 
 :clone
-git clone https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation
-git clone https://github.com/Rubberduckycooly/RSDKv5-Example-Mods.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods
-git clone https://github.com/Rubberduckycooly/GameAPI.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
-git clone https://github.com/Rubberduckycooly/RSDKv5-Decompilation.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5 --recursive
+git clone https://github.com/RSDKModding/Sonic-Mania-Decompilation.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation
+git clone https://github.com/RSDKModding/RSDKv5-Example-Mods.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods
+git clone https://github.com/RSDKModding/RSDKv5-GameAPI.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
+git clone https://github.com/RSDKModding/RSDKv5-Decompilation.git "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5 --recursive
 echo Cloning done.
 cls
 goto dependencies
@@ -102,7 +102,7 @@ goto finish
 cls
 color AF
 echo -------------------------------------------------------------------------------------------------------------------
-echo SETUP COMPLETE. Please continue with the guide at https://github.com/MisterSheeple/Sonic-Mania-Android-Build-Guide/
+echo SETUP COMPLETE. Please continue with the guide at https://github.com/Kiaru-the-Fox/Sonic-Mania-Android-Build-Guide/
 echo -------------------------------------------------------------------------------------------------------------------
 echo.
 pause
