@@ -45,8 +45,8 @@ goto dependencies
 
 :dependencies
 cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5\dependencies\android
-curl -L http://downloads.xiph.org/releases/theora/libtheora-1.1.1.zip --output libtheora.zip
-curl -L http://downloads.xiph.org/releases/ogg/libogg-1.3.5.zip --output libogg.zip
+curl -L http://downloads.xiph.org/releases/theora/libtheora-1.1.1.zip --output libtheora.zip --ssl-no-revoke
+curl -L http://downloads.xiph.org/releases/ogg/libogg-1.3.5.zip --output libogg.zip --ssl-no-revoke
 powershell -command "Expand-Archive -LiteralPath '"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5\dependencies\android\libtheora.zip' -DestinationPath '"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5\dependencies\android\'"
 powershell -command "Expand-Archive -LiteralPath '"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5\dependencies\android\libogg.zip' -DestinationPath '"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompilation\dependencies\RSDKv5\dependencies\android\'"
 pause
