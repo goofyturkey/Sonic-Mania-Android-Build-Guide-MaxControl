@@ -84,8 +84,7 @@ pause
 goto ultrawidesetup
 
 :ultrawidesetup
-cd
-"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania
+cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania
 if /I %ultrawide%==n (goto mainsymlinksetup)
 cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
 xcopy "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania\GameAPI /s /y /i
@@ -93,8 +92,7 @@ pause
 goto maxcontrolsetup
 
 :maxcontrolsetup
-cd 
-"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\MaxControl
+cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\MaxControl
 if /I %maxcontrol%==n (goto mainsymlinksetup)
 cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
 xcopy "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
