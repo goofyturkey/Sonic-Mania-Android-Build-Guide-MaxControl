@@ -29,8 +29,10 @@ goto preferences
 :preferences
 set touch=y
 set ultrawide=y
+set maxcontrol=y
 set /p touch=Build with Touch Control support? (y/n; default is y) 
 set /p ultrawide=Build with Ultra-Widescreen support? (y/n; default is y) 
+set /p maxcontrol=Build with All Abbilities? (y/n; default is y)
 cls
 goto clone
 
@@ -82,10 +84,21 @@ pause
 goto ultrawidesetup
 
 :ultrawidesetup
-cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania
+cd
+"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania
 if /I %ultrawide%==n (goto mainsymlinksetup)
 cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
 xcopy "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania\GameAPI /s /y /i
+pause
+goto maxcontrolsetup
+
+:maxcontrolsetup
+cd 
+"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\MaxControl
+if /I %maxcontrol%==n (goto mainsymlinksetup)
+cd "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
+xcopy "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
+"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\MaxControl\GameAPI /s /y /i
 pause
 goto mainsymlinksetup
 
@@ -95,6 +108,8 @@ mklink /D "Game" "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\Sonic-Mania-Decompi
 mklink /D "GameAPI" "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\GameAPI
 if /I %touch%==y mklink /D "MTouchCtrl" "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\ManiaTouchControls
 if /I %ultrawide%==y mklink /D "UWMania" "%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\UltrawideMania
+if /I %maxcontrol%==y mklink /D "MControl"
+"%USERPROFILE%"\Sonic-Mania-Android-Sheeple\RSDKv5-Example-Mods\MaxControl
 echo Symlink setup done.
 goto finish
 
